@@ -121,5 +121,5 @@ rem bits 要求有 Content-Length 才能下载
 rem https://learn.microsoft.com/en-us/windows/win32/bits/http-requirements-for-bits-downloads
 rem certutil 会被 windows Defender 报毒
 echo Download: %~1 %~2
-Invoke-WebRequest -Uri %~1 -UseBasicParsing -OutFile %~2
+powershell -command "Invoke-WebRequest -Uri %~1 -UseBasicParsing -OutFile %~2"
 exit /b !errorlevel!
